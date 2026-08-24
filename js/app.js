@@ -1005,8 +1005,8 @@ class AtelierApp {
 
         <form id="conciergeForm" onsubmit="return false;">
           <div class="concierge-grid">
-            <div>
-              <label style="display: block; font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); margin-bottom: 0.35rem;">${c.lblProcedure}</label>
+            <div class="input-group">
+              <label class="input-label" for="conciergeServiceSelect">${c.lblProcedure}</label>
               <select id="conciergeServiceSelect" class="input-field">
                 ${items.map((t, idx) => `
                   <option value="${idx}" ${this.selectedServiceIndex === idx ? 'selected' : ''}>
@@ -1016,8 +1016,8 @@ class AtelierApp {
               </select>
             </div>
 
-            <div>
-              <label style="display: block; font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); margin-bottom: 0.35rem;">${c.lblTime}</label>
+            <div class="input-group">
+              <label class="input-label" for="conciergeTimeWindow">${c.lblTime}</label>
               <select id="conciergeTimeWindow" class="input-field">
                 ${c.timeOptions.map((opt, i) => `
                   <option value="${opt}" ${i === 2 ? 'selected' : ''}>${opt}</option>
@@ -1025,18 +1025,18 @@ class AtelierApp {
               </select>
             </div>
 
-            <div>
-              <label style="display: block; font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); margin-bottom: 0.35rem;">${c.lblName}</label>
+            <div class="input-group">
+              <label class="input-label" for="conciergeName">${c.lblName}</label>
               <input type="text" id="conciergeName" class="input-field" placeholder="${c.phName}" required>
             </div>
 
-            <div>
-              <label style="display: block; font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); margin-bottom: 0.35rem;">${c.lblContact}</label>
+            <div class="input-group">
+              <label class="input-label" for="conciergeContact">${c.lblContact}</label>
               <input type="text" id="conciergeContact" class="input-field" placeholder="${c.phContact}" required>
             </div>
           </div>
 
-          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+          <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap; margin-top: var(--space-6);">
             <button type="button" class="btn btn-solid" id="btnAtelierTelegram" onclick="window.app.submitTelegramBooking()">
               ${c.btnTelegram}
             </button>

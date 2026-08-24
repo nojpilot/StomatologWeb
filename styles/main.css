@@ -1,68 +1,76 @@
 /* ==========================================================================
-   Dr. Sabina Azimova — Unified Design System
-   High-Precision Typography Scale, Strict Layout Rhythm & Architectural Grid
+   Dr. Sabina Azimova — Production Design System & Strict Tokens
+   Adheres to Design Standards: Spacing Scale, Type Scale, WCAG AA, Zero Overflow
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Strict Neutral Canvas */
-  --bg-page: #F9F8F5;            /* Warm Alabaster Canvas */
-  --bg-card: #FFFFFF;
-  --bg-subtle: #F2EFE9;          /* Soft Oyster Beige */
-  --bg-dark: #161514;            /* Obsidian Dark */
+  /* 1. Color Tokens */
+  --bg-page: #FAF9F6;              /* Warm Alabaster Canvas */
+  --bg-card: #FFFFFF;              /* Pure Card Surface */
+  --bg-subtle: #F2EFE9;            /* Secondary Oyster Tone */
+  --bg-dark: #141312;              /* Obsidian Charcoal */
+  --bg-dark-card: #1C1B1A;
 
-  /* Text Colors */
-  --text-main: #181716;          /* Deep Primary Ink */
-  --text-muted: #5C5852;         /* Standard Readable Body */
-  --text-light: #8C877E;         /* Captions & Labels */
-  --text-inverse: #F9F8F5;
+  --text-main: #141312;            /* Deep Primary Ink */
+  --text-muted: #4F4C46;           /* Readable Body Text (5.5:1 on white) */
+  --text-light: #7E7970;           /* Captions & Sub-labels */
+  --text-on-dark: #F5F4F0;
+  --text-muted-on-dark: #A6A197;
 
-  /* Brand Accents */
-  --gold-main: #9E7D58;          /* Warm Brushed Gold */
-  --gold-dark: #7A5F40;
-  --gold-light: #EFE5D8;
+  --gold-main: #9E7D58;            /* Brushed Champagne Gold */
+  --gold-dark: #7D6142;
+  --gold-light: #EFE6D8;
+  --gold-tint: rgba(158, 125, 88, 0.08);
 
-  /* Borders & Shadows */
-  --border-hairline: rgba(24, 23, 22, 0.08);
-  --border-medium: rgba(24, 23, 22, 0.16);
-  --shadow-sm: 0 2px 8px rgba(24, 23, 22, 0.04);
-  --shadow-md: 0 12px 32px rgba(24, 23, 22, 0.06);
-  --shadow-lg: 0 24px 64px rgba(24, 23, 22, 0.1);
+  --border-subtle: rgba(20, 19, 18, 0.08);
+  --border-medium: rgba(20, 19, 18, 0.16);
+  --border-on-dark: rgba(255, 255, 255, 0.12);
 
-  /* Strict Typography Scale */
+  --shadow-xs: 0 1px 3px rgba(20, 19, 18, 0.04);
+  --shadow-sm: 0 4px 12px rgba(20, 19, 18, 0.05);
+  --shadow-md: 0 12px 32px rgba(20, 19, 18, 0.07);
+  --shadow-lg: 0 24px 60px rgba(20, 19, 18, 0.1);
+
+  /* 2. Strict Typography Scale */
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  --text-xs: 0.75rem;    /* 12px - Eyebrows, Badges */
-  --text-sm: 0.875rem;   /* 14px - Meta, Sub-labels */
-  --text-base: 1rem;     /* 16px - Standard Body */
-  --text-lg: 1.125rem;   /* 18px - Lead paragraphs */
-  --text-xl: 1.375rem;   /* 22px - Subheadings / H3 */
-  --text-2xl: 2rem;      /* 32px - Section Titles / H2 */
-  --text-3xl: 3.25rem;   /* 52px - Hero Main Title / H1 */
+  --text-xs: 0.75rem;              /* 12px - Eyebrow, Badges */
+  --text-sm: 0.875rem;             /* 14px - Meta, Subtext */
+  --text-base: 1rem;               /* 16px - Standard Body */
+  --text-lg: 1.125rem;             /* 18px - Lead Paragraphs */
+  --text-xl: 1.375rem;             /* 22px - Card Titles (H3) */
+  --text-2xl: 2rem;                /* 32px - Section Titles (H2) */
+  --text-3xl: 3.25rem;             /* 52px - Hero Display (H1) */
 
-  /* Spacing Grid (8px baseline) */
-  --space-2: 0.5rem;     /* 8px */
-  --space-3: 0.75rem;    /* 12px */
-  --space-4: 1rem;       /* 16px */
-  --space-6: 1.5rem;     /* 24px */
-  --space-8: 2rem;       /* 32px */
-  --space-12: 3rem;      /* 48px */
-  --space-16: 4rem;      /* 64px */
-  --space-24: 6rem;      /* 96px */
+  /* 3. Spacing Grid (8px baseline) */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-20: 5rem;    /* 80px */
+  --space-24: 6rem;    /* 96px */
 
-  /* Layout */
-  --max-width: 1180px;
-  --header-h: 80px;
-  --radius-sm: 6px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
+  /* 4. Structural Layout Tokens */
+  --max-width: 1140px;
+  --container-gutter: 24px;
+  --header-h: 76px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
   --radius-full: 9999px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Reset & Normalize */
+/* Base Reset & Overflow Quarantine */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -74,6 +82,8 @@ html {
   font-size: 16px;
   background-color: var(--bg-page);
   color: var(--text-main);
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {
@@ -85,6 +95,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  max-width: 100vw;
+  position: relative;
 }
 
 /* Strict Typography Elements */
@@ -97,19 +109,25 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: clamp(2.4rem, 4.5vw, var(--text-3xl));
+  font-size: clamp(2.1rem, 4.2vw, var(--text-3xl));
   line-height: 1.1;
   font-weight: 700;
 }
 
 h2 {
-  font-size: clamp(1.8rem, 3.2vw, var(--text-2xl));
+  font-size: clamp(1.65rem, 2.8vw, var(--text-2xl));
   line-height: 1.2;
 }
 
 h3 {
   font-size: var(--text-xl);
   line-height: 1.3;
+}
+
+h4 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  line-height: 1.35;
 }
 
 p {
@@ -121,6 +139,7 @@ p {
 a {
   color: inherit;
   text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 button {
@@ -128,6 +147,7 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+  user-select: none;
 }
 
 img {
@@ -136,25 +156,29 @@ img {
   height: auto;
 }
 
-/* Core Container */
+/* Master Container Grid (Uniform Across Entire Website) */
 .container {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 var(--space-6);
+  padding-left: var(--container-gutter);
+  padding-right: var(--container-gutter);
+  box-sizing: border-box;
 }
 
-/* Structured Section Layout */
+/* Standardized Section Padding & Dividers */
 .section {
-  padding: var(--space-24) 0;
-  border-bottom: 1px solid var(--border-hairline);
+  padding: var(--space-20) 0;
+  border-bottom: 1px solid var(--border-subtle);
   position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .section-head {
   text-align: center;
-  max-width: 680px;
-  margin: 0 auto var(--space-16) auto;
+  max-width: 640px;
+  margin: 0 auto var(--space-12) auto;
 }
 
 .section-tag {
@@ -163,23 +187,29 @@ img {
   font-size: var(--text-xs);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.16em;
   color: var(--gold-main);
+  margin-bottom: var(--space-2);
+}
+
+.section-head h2 {
   margin-bottom: var(--space-3);
 }
 
 .section-head p {
-  margin-top: var(--space-3);
   font-size: var(--text-base);
+  color: var(--text-muted);
+  line-height: 1.6;
 }
 
-/* Button System */
+/* Unified Button Component Standards */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-  padding: 0.85rem 1.85rem;
+  min-height: 48px;
+  padding: 0.75rem 1.65rem;
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 600;
@@ -188,21 +218,25 @@ img {
   transition: all 0.25s var(--ease);
   white-space: nowrap;
   cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .btn-solid {
   background: var(--text-main);
   color: #FFFFFF;
+  border: 1px solid var(--text-main);
 }
 
 .btn-solid:hover {
-  background: #33312E;
+  background: #2E2C2A;
+  border-color: #2E2C2A;
   transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
 }
 
 .btn-wire {
-  border: 1px solid var(--text-main);
+  border: 1.5px solid var(--text-main);
   color: var(--text-main);
   background: transparent;
 }
@@ -210,27 +244,31 @@ img {
 .btn-wire:hover {
   background: var(--text-main);
   color: #FFFFFF;
+  transform: translateY(-1px);
 }
 
 .btn-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
   font-size: var(--text-sm);
   font-weight: 600;
   color: var(--text-main);
-  border-bottom: 1.5px solid var(--text-main);
+  border-bottom: 1.5px solid var(--gold-main);
   padding-bottom: 2px;
+  min-height: 44px;
   transition: opacity 0.2s;
 }
 
 .btn-link:hover {
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 .btn-sm {
-  padding: 0.55rem 1.25rem;
-  font-size: 0.8rem;
+  min-height: 38px;
+  padding: 0.45rem 1.15rem;
+  font-size: var(--text-xs);
+  font-weight: 600;
 }
 
 .italic-serif {

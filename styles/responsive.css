@@ -1,21 +1,23 @@
 /* ==========================================================================
-   Dr. Sabina Azimova — Responsive Design
-   Breakpoints: 1024px (Tablet) & 768px (Mobile)
+   Dr. Sabina Azimova — Production Responsive Engineering
+   Standardized Mobile & Tablet Layouts, Strict Grid, Zero Horizontal Scroll
    ========================================================================== */
 
+/* --------------------------------------------------------------------------
+   Tablet Breakpoint (max-width: 1024px)
+   -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
+  :root {
+    --container-gutter: 20px;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
     gap: var(--space-8);
   }
 
   .hero-photo-frame img {
-    height: 400px;
-  }
-
-  .manifesto-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
+    height: 420px;
   }
 
   .trust-grid {
@@ -28,7 +30,7 @@
   }
 
   .atelier-split-viewport {
-    height: 380px;
+    height: 400px;
   }
 
   .works-grid {
@@ -36,7 +38,7 @@
   }
 
   .menu-item {
-    grid-template-columns: 40px 1.5fr 1fr;
+    grid-template-columns: 40px 1.4fr 1fr;
     gap: var(--space-4);
   }
 
@@ -60,17 +62,41 @@
   }
 }
 
+/* --------------------------------------------------------------------------
+   Mobile Breakpoint (max-width: 768px)
+   -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
   :root {
-    --header-h: 70px;
+    --container-gutter: 16px;
+    --header-h: 68px;
+    --text-3xl: 2.15rem;
+    --text-2xl: 1.65rem;
   }
 
   .section {
-    padding: var(--space-16) 0;
+    padding: var(--space-12) 0;
   }
 
+  .section-head {
+    margin-bottom: var(--space-8);
+  }
+
+  /* Header & Mobile Drawer */
   .site-header {
     height: var(--header-h);
+  }
+
+  .brand-title {
+    font-size: 0.85rem;
+  }
+
+  .brand-sub {
+    font-size: 0.68rem;
+  }
+
+  .logo-img {
+    width: 34px;
+    height: 34px;
   }
 
   .nav-burger {
@@ -81,19 +107,21 @@
     position: fixed;
     top: var(--header-h);
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: calc(100dvh - var(--header-h));
     background: var(--bg-page);
     flex-direction: column;
     align-items: flex-start;
-    padding: var(--space-8) var(--space-6);
-    gap: var(--space-6);
-    border-top: 1px solid var(--border-hairline);
-    transform: translateY(-10px);
+    padding: var(--space-6) var(--space-5);
+    gap: var(--space-4);
+    border-top: 1px solid var(--border-subtle);
+    transform: translateY(-8px);
     opacity: 0;
     pointer-events: none;
-    transition: all 0.3s var(--ease);
+    transition: all 0.25s var(--ease);
     z-index: 1000;
+    overflow-y: auto;
+    box-sizing: border-box;
   }
 
   .nav-menu.active {
@@ -105,11 +133,12 @@
   .nav-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(22, 21, 20, 0.4);
+    background: rgba(20, 19, 18, 0.4);
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s var(--ease);
+    transition: opacity 0.25s var(--ease);
     z-index: 999;
   }
 
@@ -119,15 +148,49 @@
   }
 
   .nav-item {
-    font-size: var(--text-lg);
+    font-size: 1.1rem;
     font-weight: 600;
     width: 100%;
-    padding-bottom: var(--space-3);
-    border-bottom: 1px solid var(--border-hairline);
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--border-subtle);
   }
 
   .header-right .btn-sm {
     display: none;
+  }
+
+  /* Hero Section */
+  .hero-editorial {
+    padding-top: calc(var(--header-h) + var(--space-6));
+    padding-bottom: var(--space-10);
+  }
+
+  .hero-grid {
+    gap: var(--space-6);
+  }
+
+  .hero-statement {
+    font-size: var(--text-base);
+    margin: var(--space-3) 0 var(--space-6) 0;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-photo-frame img {
+    height: 360px;
+  }
+
+  /* Trust Bar */
+  .trust-bar {
+    padding: var(--space-6) 0;
   }
 
   .trust-grid {
@@ -135,15 +198,42 @@
     gap: var(--space-4);
   }
 
-  .works-grid {
-    grid-template-columns: 1fr;
+  .trust-item {
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--border-subtle);
   }
 
+  .trust-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  /* Slider Card */
+  .atelier-split-viewport {
+    height: 300px;
+  }
+
+  .atelier-details {
+    padding: var(--space-5);
+  }
+
+  /* Works Grid */
+  .works-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .work-thumb {
+    height: 220px;
+  }
+
+  /* Kids Section */
   .kids-features-grid {
     grid-template-columns: 1fr;
     gap: var(--space-4);
   }
 
+  /* Treatment Menu */
   .menu-item {
     grid-template-columns: 1fr auto;
     gap: var(--space-2);
@@ -160,33 +250,73 @@
     gap: var(--space-2);
   }
 
+  /* Journal Section */
   .journal-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-4);
   }
 
+  .journal-tg-banner {
+    padding: var(--space-5);
+  }
+
+  /* Concierge Form */
   .concierge-card {
-    padding: var(--space-6);
+    padding: var(--space-5);
   }
 
   .concierge-grid {
     grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: var(--space-10) 0 var(--space-6) 0;
   }
 
   .footer-top-grid {
     grid-template-columns: 1fr;
     gap: var(--space-6);
+    padding-bottom: var(--space-8);
   }
 
   .footer-bottom-bar {
     flex-direction: column;
-    gap: var(--space-3);
+    gap: var(--space-2);
     text-align: center;
   }
 
+  /* Floating Pill */
   .floating-atelier-pill {
     bottom: var(--space-4);
     right: var(--space-4);
-    padding: 0.65rem 1.1rem;
+    padding: 0.65rem 1.15rem;
     font-size: var(--text-xs);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Narrow Mobile Breakpoint (max-width: 390px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 390px) {
+  :root {
+    --container-gutter: 12px;
+  }
+
+  .hero-photo-frame img {
+    height: 310px;
+  }
+
+  .atelier-split-viewport {
+    height: 260px;
+  }
+
+  .atelier-details {
+    padding: var(--space-4);
+  }
+
+  .concierge-card {
+    padding: var(--space-4);
   }
 }
