@@ -1,0 +1,240 @@
+/* ==========================================================================
+   Dr. Sabina Azimova — Unified Design System
+   High-Precision Typography Scale, Strict Layout Rhythm & Architectural Grid
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Strict Neutral Canvas */
+  --bg-page: #F9F8F5;            /* Warm Alabaster Canvas */
+  --bg-card: #FFFFFF;
+  --bg-subtle: #F2EFE9;          /* Soft Oyster Beige */
+  --bg-dark: #161514;            /* Obsidian Dark */
+
+  /* Text Colors */
+  --text-main: #181716;          /* Deep Primary Ink */
+  --text-muted: #5C5852;         /* Standard Readable Body */
+  --text-light: #8C877E;         /* Captions & Labels */
+  --text-inverse: #F9F8F5;
+
+  /* Brand Accents */
+  --gold-main: #9E7D58;          /* Warm Brushed Gold */
+  --gold-dark: #7A5F40;
+  --gold-light: #EFE5D8;
+
+  /* Borders & Shadows */
+  --border-hairline: rgba(24, 23, 22, 0.08);
+  --border-medium: rgba(24, 23, 22, 0.16);
+  --shadow-sm: 0 2px 8px rgba(24, 23, 22, 0.04);
+  --shadow-md: 0 12px 32px rgba(24, 23, 22, 0.06);
+  --shadow-lg: 0 24px 64px rgba(24, 23, 22, 0.1);
+
+  /* Strict Typography Scale */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --text-xs: 0.75rem;    /* 12px - Eyebrows, Badges */
+  --text-sm: 0.875rem;   /* 14px - Meta, Sub-labels */
+  --text-base: 1rem;     /* 16px - Standard Body */
+  --text-lg: 1.125rem;   /* 18px - Lead paragraphs */
+  --text-xl: 1.375rem;   /* 22px - Subheadings / H3 */
+  --text-2xl: 2rem;      /* 32px - Section Titles / H2 */
+  --text-3xl: 3.25rem;   /* 52px - Hero Main Title / H1 */
+
+  /* Spacing Grid (8px baseline) */
+  --space-2: 0.5rem;     /* 8px */
+  --space-3: 0.75rem;    /* 12px */
+  --space-4: 1rem;       /* 16px */
+  --space-6: 1.5rem;     /* 24px */
+  --space-8: 2rem;       /* 32px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+  --space-24: 6rem;      /* 96px */
+
+  /* Layout */
+  --max-width: 1180px;
+  --header-h: 80px;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Normalize */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.65;
+  color: var(--text-main);
+  background-color: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Strict Typography Elements */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--text-main);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 4.5vw, var(--text-3xl));
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3.2vw, var(--text-2xl));
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: var(--text-xl);
+  line-height: 1.3;
+}
+
+p {
+  color: var(--text-muted);
+  font-size: var(--text-base);
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Core Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+/* Structured Section Layout */
+.section {
+  padding: var(--space-24) 0;
+  border-bottom: 1px solid var(--border-hairline);
+  position: relative;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto var(--space-16) auto;
+}
+
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--gold-main);
+  margin-bottom: var(--space-3);
+}
+
+.section-head p {
+  margin-top: var(--space-3);
+  font-size: var(--text-base);
+}
+
+/* Button System */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 0.85rem 1.85rem;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: var(--radius-full);
+  transition: all 0.25s var(--ease);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn-solid {
+  background: var(--text-main);
+  color: #FFFFFF;
+}
+
+.btn-solid:hover {
+  background: #33312E;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-wire {
+  border: 1px solid var(--text-main);
+  color: var(--text-main);
+  background: transparent;
+}
+
+.btn-wire:hover {
+  background: var(--text-main);
+  color: #FFFFFF;
+}
+
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-main);
+  border-bottom: 1.5px solid var(--text-main);
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+
+.btn-link:hover {
+  opacity: 0.7;
+}
+
+.btn-sm {
+  padding: 0.55rem 1.25rem;
+  font-size: 0.8rem;
+}
+
+.italic-serif {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 600;
+}

@@ -1,0 +1,14 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pure High-End Aesthetic Monogram S•A -->
+  <style>
+    .serif-letter { font-family: 'Playfair Display', Georgia, serif; font-size: 26px; font-weight: 600; fill: #181716; }
+    .gold-accent { fill: #9E7D58; }
+  </style>
+  
+  <!-- Intertwined Architectural Letters -->
+  <text x="11" y="32" class="serif-letter" letter-spacing="-0.04em">S</text>
+  <text x="21" y="32" class="serif-letter" style="fill: #9E7D58; font-style: italic;" letter-spacing="-0.04em">A</text>
+  
+  <!-- Subtle Refinement Dot -->
+  <circle cx="39" cy="30" r="1.8" class="gold-accent"/>
+</svg>

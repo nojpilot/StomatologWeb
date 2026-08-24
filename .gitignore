@@ -1,0 +1,5 @@
+.agents/
+.DS_Store
+Thumbs.db
+server.ps1
+test_verify.ps1
