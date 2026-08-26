@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>SABINA AZIMOVA — Стоматолог и Гигиенист</title>
-  <meta name="description" content="Бережная стоматология, швейцарский протокол гигиены AirFlow GBT и детский прием без страха и слез от доктора Сабины Азимовой.">
+  <title>Доктор Сабина Азимова — Стоматолог и Гигиенист | Санкт-Петербург</title>
+  <meta name="description" content="Бережная стоматология, швейцарский протокол гигиены AirFlow GBT и детский прием без страха и слез от доктора Сабины Азимовой в Санкт-Петербурге.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
 
   <!-- OpenGraph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="SABINA AZIMOVA | Стоматология и гигиена">
-  <meta property="og:description" content="Бережная гигиена полости рта, детский игровой прием и эстетическая терапия.">
+  <meta property="og:title" content="Доктор Сабина Азимова | Бережная стоматология & Детский прием">
+  <meta property="og:description" content="Швейцарский протокол AirFlow GBT, адаптационный прием детей без слез, эстетическая терапия и отбеливание.">
   <meta property="og:image" content="assets/images/dr-sabina.jpg">
 
   <!-- Stylesheets -->
@@ -22,14 +22,19 @@
 </head>
 <body>
 
+  <!-- WCAG Accessibility: Skip to Content -->
+  <a href="#about" class="skip-link">Перейти к основному контенту</a>
+
   <!-- ========================================================================
-       1. Structured Header with Bespoke SVG Logo
+       1. Structured Header with Paper Stamp Logo
        ======================================================================== -->
   <header class="site-header" id="siteHeader">
     <div class="container nav-wrap">
       <!-- SVG Brand Logo -->
-      <a href="#" class="brand-logo" aria-label="Sabina Azimova">
-        <img src="assets/icons/logo.svg" alt="Sabina Azimova Logo" class="logo-img">
+      <a href="#" class="brand-logo" aria-label="Доктор Сабина Азимова — на главную">
+        <div class="logo-wrap">
+          <img src="assets/icons/logo.svg" alt="Логотип Сабины Азимовой" class="logo-img">
+        </div>
         <div class="brand-text">
           <span class="brand-title" id="brandTitle">SABINA AZIMOVA</span>
           <span class="brand-sub" id="brandSub">Стоматолог • Гигиенист</span>
@@ -37,7 +42,7 @@
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="nav-menu" id="navMenu">
+      <nav class="nav-menu" id="navMenu" aria-label="Основная навигация">
         <a href="#about" class="nav-item">О докторе</a>
         <a href="#gallery" class="nav-item">Работы</a>
         <a href="#kids" class="nav-item">Детям</a>
@@ -49,33 +54,40 @@
       <!-- Right Controls: Language Switcher + Reservation CTA -->
       <div class="header-right">
         <!-- Language Switcher Capsule -->
-        <div class="lang-switcher" role="group" aria-label="Language selection">
+        <div class="lang-switcher" role="group" aria-label="Выбор языка / Language selection">
           <button type="button" class="lang-btn active" data-lang="ru" onclick="window.app.setLanguage('ru')">RU</button>
           <button type="button" class="lang-btn" data-lang="en" onclick="window.app.setLanguage('en')">EN</button>
         </div>
 
-        <a href="#concierge" class="btn btn-solid btn-sm" id="headerCta">Записаться</a>
+        <a href="#concierge" class="btn btn-amber btn-sm" id="headerCta">Записаться</a>
         <button type="button" class="nav-burger" id="navBurger" aria-label="Меню" aria-expanded="false" onclick="window.app.toggleMobileMenu()">☰</button>
       </div>
     </div>
     <div class="nav-backdrop" id="navBackdrop" onclick="window.app.closeMobileMenu()"></div>
   </header>
 
-  <main>
+  <main id="mainContent">
     <!-- ========================================================================
-         2. Hero (Disciplined, Structured, Editorial)
+         2. Hero (Tactile Paper Notebook with Polaroid)
          ======================================================================== -->
     <section class="hero-editorial" id="about">
       <div class="container hero-grid">
-        <div>
-          <span class="section-tag" id="heroTag">Швейцарский протокол GBT • Детский прием • Отбеливание</span>
+        <div class="hero-content">
+          <div>
+            <span class="section-tag" id="heroTag">Швейцарский протокол GBT • Детский прием • Отбеливание</span>
+          </div>
+
+          <div class="hero-kid-badge" id="heroKidBadge">
+            🦷 Бережно & без боли для малышей и взрослых ✨
+          </div>
+
           <h1 id="heroTitle">
             Красота и здоровье <br>
             <span class="italic-serif">вашей улыбки</span>
           </h1>
 
           <p class="hero-statement" id="heroStatement">
-            Бережная гигиена AirFlow на основе глицина, легкая адаптация маленьких пациентов без страха и слез, деликатное отбеливание и терапия премиальными материалами.
+            Бережная гигиена AirFlow на основе глицина, легкая адаптация маленьких пациентов в форме игры, деликатное отбеливание и терапия премиальными материалами.
           </p>
 
           <div class="hero-actions">
@@ -88,12 +100,16 @@
           </div>
         </div>
 
-        <div>
-          <div class="hero-photo-frame">
-            <img src="assets/images/dr-sabina.jpg" alt="Доктор Сабина Азимова — стоматолог и гигиенист">
-            <div class="photo-caption-bar">
-              <span id="heroCaptionDoctor">Доктор Сабина Азимова</span>
-              <span id="heroCaptionCity" style="opacity: 0.9;">Петроградская / Невский</span>
+        <div class="hero-photo-container">
+          <div class="hero-polaroid">
+            <div class="washi-tape washi-tape-yellow"></div>
+            <img src="assets/images/dr-sabina.jpg" alt="Доктор Сабина Азимова — стоматолог и гигиенист" width="440" height="440" fetchpriority="high">
+            <div class="hero-polaroid-caption">
+              <span class="hero-polaroid-name" id="heroCaptionDoctor">Доктор Сабина Азимова</span>
+              <span class="hero-polaroid-city" id="heroCaptionCity">Петроградская / Невский</span>
+            </div>
+            <div class="hero-doodle-arrow" id="heroDoodleArrow">
+              Смотри сюда! ✦
             </div>
           </div>
         </div>
@@ -101,9 +117,9 @@
     </section>
 
     <!-- ========================================================================
-         3. Trust & Clinical Metrics Bar (4 Columns)
+         3. Trust & Clinical Metrics Bar (Craft Index Cards)
          ======================================================================== -->
-    <section class="trust-bar">
+    <section class="trust-bar" aria-label="Стандарты заботы и надежности">
       <div class="container">
         <div class="trust-grid" id="trustMount"></div>
       </div>
@@ -117,7 +133,7 @@
         <div class="section-head">
           <span class="section-tag" id="galleryTag">Клинические результаты</span>
           <h2 id="galleryTitle">Галерея До & После</h2>
-          <p id="gallerySub">Потяните интерактивную линию, чтобы в деталях рассмотреть чистоту и текстуру эмали.</p>
+          <p id="gallerySub">Потяните интерактивную линию или используйте клавиши ← →, чтобы рассмотреть чистоту эмали.</p>
         </div>
 
         <div id="galleryMount"></div>
@@ -125,7 +141,7 @@
     </section>
 
     <!-- ========================================================================
-         5. Real Works Macro Gallery Grid (6 Authentic Cases)
+         5. Real Works Macro Gallery Grid (Polaroid Cases)
          ======================================================================== -->
     <section class="section works-grid-section">
       <div class="container">
@@ -140,28 +156,42 @@
     </section>
 
     <!-- ========================================================================
-         6. Children's Adaptation & Dental Care
+         6. Children's Adaptation & Dental Care ("Детская лаборатория улыбок")
          ======================================================================== -->
     <section class="section kids-section" id="kids">
       <div class="container">
-        <div class="hero-grid" style="align-items: center;">
+        <div class="kids-story-container">
           <div>
-            <span class="section-tag" id="kidsTag">Особый подход к детям</span>
+            <div class="kids-badge-banner">
+              <span class="section-tag" id="kidsTag">Детская лаборатория улыбок</span>
+              <span class="kid-note" id="kidsBadge">⭐ 100% без слез и страха</span>
+            </div>
+
             <h2 id="kidsTitle">Стоматолог, к которому ребенок идет с улыбкой</h2>
             <p id="kidsDesc" style="margin-top: var(--space-4);">
               Я искренне люблю детей и знаю, как важно бережно сформировать первое впечатление о докторе. Мы не пугаем строгими правилами и уколами: мы играем, знакомимся со «щеткой-ветерком», чистим зубки веселым персонажам и учимся правильно ухаживать за улыбкой дома.
             </p>
 
-            <div class="kids-features-grid" id="kidsFeaturesMount"></div>
+            <!-- 4-step Storybook Cards -->
+            <div class="kids-steps-grid" id="kidsStepsMount"></div>
 
-            <a href="#concierge" class="btn btn-solid" id="kidsBtn" onclick="window.app.setConciergeService('kids')">
-              Записать ребенка на адаптационный визит
-            </a>
+            <!-- Doctor Routine Memo Card -->
+            <div class="kids-routine-card" id="kidsRoutineMount"></div>
+
+            <div style="margin-top: var(--space-8);">
+              <a href="#concierge" class="btn btn-amber" id="kidsBtn" onclick="window.app.setConciergeService('kids')">
+                Записать ребенка на адаптационный визит
+              </a>
+            </div>
           </div>
 
-          <div>
-            <div class="hero-photo-frame">
-              <img src="assets/images/reel-hygiene.jpg" alt="Обучение детей гигиене зубов — Доктор Сабина Азимова" style="height: 480px; object-fit: cover;">
+          <div style="display: flex; justify-content: center;">
+            <div class="hero-polaroid" style="transform: rotate(-1.5deg);">
+              <div class="washi-tape washi-tape-mint"></div>
+              <img src="assets/images/reel-hygiene.jpg" alt="Обучение детей гигиене зубов — Доктор Сабина Азимова" width="440" height="460" style="object-fit: cover; height: 440px;">
+              <div class="polaroid-caption">
+                «Маленькие герои улыбаются!» 🎈
+              </div>
             </div>
           </div>
         </div>
@@ -169,7 +199,7 @@
     </section>
 
     <!-- ========================================================================
-         7. Treatment Menu & Pricing
+         7. Treatment Menu & Pricing (Recipe / Ledger)
          ======================================================================== -->
     <section class="section menu-section" id="menu">
       <div class="container">
@@ -179,7 +209,7 @@
           <p id="menuSub">Честная прозрачная стоимость без скрытых манипуляций и навязанного лечения.</p>
         </div>
 
-        <div class="menu-list" id="menuMount"></div>
+        <div id="menuMount"></div>
       </div>
     </section>
 
@@ -202,7 +232,7 @@
             <h3 id="journalBannerTitle">Telegram-канал доктора</h3>
             <p id="journalBannerDesc">Честные разборы зубных паст, полезные лайфхаки по уходу за зубами и анонсы свободных окошек на прием.</p>
           </div>
-          <a href="https://t.me/sabina_teeth_spb" target="_blank" rel="noopener noreferrer" class="btn btn-sand" id="journalBannerBtn" style="background: #FFFFFF; color: var(--text-main); white-space: nowrap;">
+          <a href="https://t.me/sabina_teeth_spb" target="_blank" rel="noopener noreferrer" class="btn btn-amber" id="journalBannerBtn" style="white-space: nowrap;">
             Открыть Telegram-канал →
           </a>
         </div>
@@ -210,7 +240,7 @@
     </section>
 
     <!-- ========================================================================
-         9. Concierge Reservation Form
+         9. Concierge Reservation Form (Appointment Card)
          ======================================================================== -->
     <section class="section concierge-section" id="concierge">
       <div class="container">
@@ -220,17 +250,22 @@
   </main>
 
   <!-- ========================================================================
-       10. Minimalist Structured Footer
+       10. Storybook Minimalist Footer
        ======================================================================== -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top-grid">
         <div class="footer-brand">
           <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-            <img src="assets/icons/logo-dark.svg" alt="Logo" style="width: 34px; height: 34px;">
+            <div style="background: rgba(255, 255, 255, 0.1); padding: 6px; border-radius: 8px;">
+              <img src="assets/icons/logo-dark.svg" alt="Логотип" style="width: 28px; height: 28px;">
+            </div>
             <h2 style="font-size: var(--text-lg); margin-bottom: 0;">SABINA AZIMOVA</h2>
           </div>
-          <p id="footerDesc">Бережная взрослая и детская стоматология, профессиональная гигиена полости рта и эстетическая терапия.</p>
+          <p id="footerDesc">Бережная взрослая и детская стоматология, профессиональная гигиена полости рта и эстетическая терапия в Санкт-Петербурге.</p>
+          <div class="footer-doctor-quote" id="footerDoctorQuote">
+            «Улыбайтесь чаще — это вам очень к лицу!» — Д-р Сабина ✦
+          </div>
         </div>
 
         <div class="footer-col">
@@ -241,25 +276,26 @@
         <div class="footer-col">
           <h4 id="footerContactTitle">Связь с доктором</h4>
           <div class="footer-links">
-            <a href="https://t.me/sabina_teeth_spb" target="_blank" rel="noopener noreferrer">✈️ Telegram-канал</a>
+            <a href="https://t.me/sabina_teeth_spb" target="_blank" rel="noopener noreferrer">✈️ Telegram-канал доктора</a>
             <a href="https://t.me/sabina_dental_spb" target="_blank" rel="noopener noreferrer">💬 Личный Telegram Сабины</a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">📸 Instagram Reels</a>
-            <a href="https://wa.me/79990002412" target="_blank" rel="noopener noreferrer">🟢 WhatsApp</a>
+            <a href="https://wa.me/79990002412" target="_blank" rel="noopener noreferrer">🟢 WhatsApp консультация</a>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom-bar">
-        <span id="footerCopyright">© 2026 Sabina Azimova Dental Atelier.</span>
+        <span id="footerCopyright">© 2026 Dr. Sabina Azimova Dental Atelier.</span>
         <span id="footerSubnote">Прием по предварительной записи</span>
       </div>
     </div>
   </footer>
 
   <!-- Floating Telegram Contact Pill -->
-  <a href="https://t.me/sabina_dental_spb" target="_blank" rel="noopener noreferrer" class="floating-atelier-pill" aria-label="Связаться в Telegram">
+  <a href="https://t.me/sabina_dental_spb" target="_blank" rel="noopener noreferrer" class="floating-atelier-pill" aria-label="Записаться к доктору в Telegram">
+    <span class="floating-tooth-sparkle">🦷</span>
     <span id="floatingTgText">Записаться в Telegram</span>
-    <span style="font-size: 0.9rem;">→</span>
+    <span style="font-size: 0.95rem;">→</span>
   </a>
 
   <!-- Application Controller Script -->

@@ -1,6 +1,6 @@
 /**
- * Dr. Sabina Azimova — Complete Atelier Application Engine
- * High-performance, self-contained, bilingual (RU / EN) with REAL Clinical Works
+ * Dr. Sabina Azimova — Tactile Paper & Storybook Atelier Engine
+ * High-performance, accessible, bilingual (RU / EN) with authentic clinical cases
  */
 
 const siteData = {
@@ -18,28 +18,38 @@ const siteData = {
     },
     hero: {
       tag: "Швейцарский протокол GBT • Детский прием • Отбеливание",
+      kidBadge: "🦷 Бережно & без боли для малышей и взрослых ✨",
       titleLine1: "Красота и здоровье",
       titleLine2: "вашей улыбки",
-      statement: "Бережная гигиена AirFlow на основе глицина, легкая адаптация маленьких пациентов без страха и слез, деликатное отбеливание и терапия премиальными материалами.",
+      statement: "Бережная гигиена AirFlow на основе глицина, легкая адаптация маленьких пациентов в форме игры, деликатное отбеливание и терапия премиальными материалами.",
       btnBook: "Записаться на прием",
       btnTelegram: "Консультация в Telegram →",
       captionDoctor: "Доктор Сабина Азимова",
-      captionCity: "Петроградская / Невский"
+      captionCity: "Петроградская / Невский",
+      doodleArrow: "Смотри сюда! ✦"
     },
     trust: [
       {
+        emoji: "🇨🇭",
+        stamp: "GBT Protocol",
         title: "Швейцарский GBT",
-        desc: "Мягкий порошок глицина очищает налет без царапин на эмали."
+        desc: "Мягкий порошок глицина бережно очищает налет без царапин на эмали."
       },
       {
+        emoji: "🎈",
+        stamp: "100% Без слез",
         title: "Детям без страха",
         desc: "Игровой адаптационный визит, подарки и улыбки маленьких героев."
       },
       {
+        emoji: "📸",
+        stamp: "Macro Photo",
         title: "Фотопротокол",
         desc: "Честная макросъемка каждого этапа до и после процедуры."
       },
       {
+        emoji: "🛡️",
+        stamp: "5-Step Sterile",
         title: "100% Стерильность",
         desc: "Строгий 5-ступенчатый протокол автоклавирования и индивидуальные наборы."
       }
@@ -47,7 +57,7 @@ const siteData = {
     gallery: {
       tag: "Клинические результаты",
       title: "Галерея До & После",
-      subtitle: "Потяните интерактивную линию, чтобы в деталях рассмотреть чистоту и текстуру эмали.",
+      subtitle: "Потяните интерактивную линию или используйте клавиши ← →, чтобы рассмотреть чистоту эмали.",
       badge: "Клинический случай",
       lblDuration: "Длительность",
       lblResult: "Результат",
@@ -55,6 +65,7 @@ const siteData = {
       btnTg: "Спросить в Telegram →",
       tagBefore: "ДО",
       tagAfter: "ПОСЛЕ",
+      sliderHint: "Потяни ползунок ⇄",
       cases: [
         {
           id: "case-airflow",
@@ -83,7 +94,7 @@ const siteData = {
           category: "ortho",
           tabLabel: "Гигиена с ретейнером",
           title: "Микроочистка зубов с ортодонтической дугой",
-          description: "Удаление скоплений налета вокруг металлического ретейнера, полировка межзубных промежутков и защита эмали.",
+          description: "Удаление скоплений налета вокруг несъемного ретейнера, полировка межзубных промежутков и защита эмали.",
           duration: "60 минут",
           result: "Чистая эмаль вокруг каждого элемента ретейнера",
           beforeImage: "assets/images/works/photo_12_2026-08-24_16-13-04.jpg",
@@ -110,62 +121,80 @@ const siteData = {
         {
           img: "assets/images/works/photo_3_2026-08-24_16-13-04.jpg",
           badge: "AirFlow Glycine",
-          title: "Удаление плотного чайного налета",
-          desc: "Восстановление естественной белизны эмали за 1 сеанс."
+          title: "Удаление плотного налета",
+          desc: "Восстановление естественной белизны эмали за 1 сеанс.",
+          doctorNote: "✨ Эмаль гладкая, как стекло"
         },
         {
           img: "assets/images/works/photo_11_2026-08-24_16-13-04.jpg",
           badge: "Piezon Ultrasound",
           title: "Очищение нижних резцов",
-          desc: "Деликатное снятие зубного камня с язычной стороны."
+          desc: "Деликатное снятие зубного камня с язычной стороны.",
+          doctorNote: "🦷 Десна здорова и спокойна"
         },
         {
           img: "assets/images/works/photo_14_2026-08-24_16-13-04.jpg",
           badge: "Орто-протокол",
-          title: "Чистка вокруг несъемного ретейнера",
-          desc: "Сохранение здоровья десен после брекет-лечения."
+          title: "Чистка вокруг ретейнера",
+          desc: "Сохранение здоровья десен после брекет-лечения.",
+          doctorNote: "🌿 Бережная монопучковая полировка"
         },
         {
           img: "assets/images/works/photo_26_2026-08-24_16-13-04.jpg",
           badge: "GBT Индикация",
-          title: "Окрашивание скрытой биопленки",
-          desc: "Наглядная демонстрация зон недостаточной домашней гигиены."
+          title: "Окрашивание биопленки",
+          desc: "Наглядная демонстрация зон недостаточной домашней гигиены.",
+          doctorNote: "🔍 Наглядно учимся чистить дома"
         },
         {
           img: "assets/images/works/photo_95_2026-08-24_16-13-04.jpg",
           badge: "Окклюзия & Фиссуры",
           title: "Микроочистка жевательных зубов",
-          desc: "Глубокое очищение рельефа зубов для профилактики кариеса."
+          desc: "Глубокое очищение рельефа зубов для профилактики кариеса.",
+          doctorNote: "🛡️ Надежная защита от кариеса"
         },
         {
           img: "assets/images/works/photo_97_2026-08-24_16-13-04.jpg",
           badge: "Реминерализация",
           title: "Укрепление эмали",
-          desc: "Насыщение минералами и снижение чувствительности шеек."
+          desc: "Насыщение минералами и снижение чувствительности шеек.",
+          doctorNote: "💎 Защитный ягодный лак"
         }
       ]
     },
     kids: {
-      tag: "Особый подход к детям",
+      tag: "Детская лаборатория улыбок",
+      badge: "⭐ 100% без слез и страха",
       title: "Стоматолог, к которому ребенок идет с улыбкой",
       desc: "Я искренне люблю детей и знаю, как важно бережно сформировать первое впечатление о докторе. Мы не пугаем строгими правилами и уколами: мы играем, знакомимся со «щеткой-ветерком», чистим зубки веселым персонажам и учимся правильно ухаживать за улыбкой дома.",
-      features: [
+      steps: [
         {
-          title: "Игровая адаптация",
-          desc: "Знакомство с кабинетом и волшебным зеркальцем в форме увлекательной игры."
+          num: "Шаг 01 💨",
+          title: "Щетка-ветерок & Знакомство",
+          desc: "Знакомство с кабинетом и безопасными инструментами в форме веселой игры."
         },
         {
-          title: "Урок правильной чистки",
-          desc: "Показываем наглядную технику и подбираем идеальную мягкую щетку и пасту."
+          num: "Шаг 02 🪞",
+          title: "Волшебное зеркальце",
+          desc: "Считаем зубки вместе с ребенком и смотрим интересные мультфильмы."
         },
         {
-          title: "Защита молочных зубов",
-          desc: "Укрепление эмали ягодным фтор-гелем для надежной профилактики кариеса."
+          num: "Шаг 03 🍓",
+          title: "Ягодный супер-гель",
+          desc: "Деликатное укрепление эмали вкусным фруктовым лаком без горечи."
         },
         {
-          title: "Подарок каждому герою",
-          desc: "Закрепляем позитивный опыт маленьким памятным сувениром после приема."
+          num: "Шаг 04 🎁",
+          title: "Медаль & Подарок героя",
+          desc: "Каждый маленький пациент выбирает памятный сувенир за смелость."
         }
+      ],
+      routineTitle: "Заметки доктора: Правило 2-х минут ⏱️",
+      routineItems: [
+        "🍓 Чистим зубки 2 раза в день по 2 минуты",
+        "🪥 Меняем щетку каждые 2–3 месяца",
+        "✨ Движения щеткой: выметающие от десны к краю",
+        "🦷 Дочищаем зубки ребенку до 8–9 лет"
       ],
       btnAction: "Записать ребенка на адаптационный визит"
     },
@@ -264,8 +293,9 @@ const siteData = {
       phContact: "+7 (999) 000-00-00 или @username",
       btnTelegram: "Записаться через Telegram →",
       btnDirect: "Оставить заявку на сайте",
-      confirmTitle: "Благодарим за обращение",
-      confirmDesc: "Доктор Сабина Азимова свяжется с вами в течение 15 минут для подтверждения времени.",
+      errEmpty: "Пожалуйста, заполните имя и контакт для связи.",
+      confirmTitle: "✨ Заявка успешно отправлена!",
+      confirmDesc: "Доктор Сабина свяжется с вами в течение 15 минут для подтверждения удобного времени.",
       timeOptions: [
         "Ближайшие дни (Утро 10:00–13:00)",
         "Ближайшие дни (День 13:00–17:00)",
@@ -274,10 +304,11 @@ const siteData = {
       ]
     },
     footer: {
-      desc: "Бережная взрослая и детская стоматология, профессиональная гигиена полости рта и эстетическая терапия.",
+      desc: "Бережная взрослая и детская стоматология, профессиональная гигиена полости рта и эстетическая терапия в Санкт-Петербурге.",
+      doctorQuote: "«Улыбайтесь чаще — это вам очень к лицу!» — Д-р Сабина ✦",
       clinicsTitle: "Адреса приема",
       contactTitle: "Связь с доктором",
-      copyright: "© 2026 Sabina Azimova Dental Atelier.",
+      copyright: "© 2026 Dr. Sabina Azimova Dental Atelier.",
       subnote: "Прием по предварительной записи"
     },
     floatingTg: "Записаться в Telegram"
@@ -297,28 +328,38 @@ const siteData = {
     },
     hero: {
       tag: "Swiss GBT Protocol • Pediatric Care • Whitening",
+      kidBadge: "🦷 Gentle & fear-free for kids and adults ✨",
       titleLine1: "The Art of a Natural",
       titleLine2: "Healthy Smile",
-      statement: "Swiss GBT AirFlow protocol with glycine powder, fear-free playful adaptation for children, teeth whitening, and aesthetic restoration.",
+      statement: "Swiss GBT AirFlow protocol with glycine powder, fear-free playful adaptation for children, gentle teeth whitening, and aesthetic restoration.",
       btnBook: "Book Appointment",
       btnTelegram: "Consult on Telegram →",
       captionDoctor: "Dr. Sabina Azimova",
-      captionCity: "Petrogradskaya / Nevsky"
+      captionCity: "Petrogradskaya / Nevsky",
+      doodleArrow: "Take a look! ✦"
     },
     trust: [
       {
+        emoji: "🇨🇭",
+        stamp: "GBT Protocol",
         title: "Swiss GBT Protocol",
         desc: "Soft glycine powder removes biofilm with zero enamel damage."
       },
       {
+        emoji: "🎈",
+        stamp: "100% Fear-Free",
         title: "Gentle for Kids",
         desc: "Playful adaptation, rewards, and happy smiling little heroes."
       },
       {
+        emoji: "📸",
+        stamp: "Macro Photo",
         title: "Photo Protocol",
         desc: "Honest clinical macro photos of every treatment step."
       },
       {
+        emoji: "🛡️",
+        stamp: "5-Step Sterile",
         title: "100% Sterilization",
         desc: "Rigorous 5-step autoclaving and sealed sterile kits."
       }
@@ -326,7 +367,7 @@ const siteData = {
     gallery: {
       tag: "Clinical Results",
       title: "Before & After Gallery",
-      subtitle: "Drag the interactive line to examine enamel texture and spotless clean results.",
+      subtitle: "Drag the interactive line or use arrow keys ← → to examine enamel texture and clean results.",
       badge: "Clinical Case",
       lblDuration: "Duration",
       lblResult: "Outcome",
@@ -334,6 +375,7 @@ const siteData = {
       btnTg: "Inquire on Telegram →",
       tagBefore: "BEFORE",
       tagAfter: "AFTER",
+      sliderHint: "Drag the split line ⇄",
       cases: [
         {
           id: "case-airflow",
@@ -389,62 +431,80 @@ const siteData = {
         {
           img: "assets/images/works/photo_3_2026-08-24_16-13-04.jpg",
           badge: "AirFlow Glycine",
-          title: "Tea & Tobacco Stain Removal",
-          desc: "Restoring natural enamel brightness in one session."
+          title: "Tea & Stain Removal",
+          desc: "Restoring natural enamel brightness in one session.",
+          doctorNote: "✨ Smooth as glass enamel"
         },
         {
           img: "assets/images/works/photo_11_2026-08-24_16-13-04.jpg",
           badge: "Piezon Ultrasound",
           title: "Lingual Incisor Calculus Scaling",
-          desc: "Gentle removal of hard tartar deposits."
+          desc: "Gentle removal of hard tartar deposits.",
+          doctorNote: "🦷 Healthy, calm gums"
         },
         {
           img: "assets/images/works/photo_14_2026-08-24_16-13-04.jpg",
           badge: "Ortho Protocol",
           title: "Bonded Retainer Micro-Cleaning",
-          desc: "Maintaining gum health after orthodontic therapy."
+          desc: "Maintaining gum health after orthodontic therapy.",
+          doctorNote: "🌿 Micro-polishing between brackets"
         },
         {
           img: "assets/images/works/photo_26_2026-08-24_16-13-04.jpg",
           badge: "GBT Disclosure",
           title: "Biofilm Staining Visualization",
-          desc: "Highlighting areas that require targeted home care."
+          desc: "Highlighting areas that require targeted home care.",
+          doctorNote: "🔍 Visual learning for home care"
         },
         {
           img: "assets/images/works/photo_95_2026-08-24_16-13-04.jpg",
           badge: "Fissure Cleaning",
           title: "Molar Occlusal Deep Cleaning",
-          desc: "Deep cleansing of chewing surfaces for caries prevention."
+          desc: "Deep cleansing of chewing surfaces for caries prevention.",
+          doctorNote: "🛡️ Effective cavity protection"
         },
         {
           img: "assets/images/works/photo_97_2026-08-24_16-13-04.jpg",
           badge: "Remineralization",
           title: "Enamel Strengthening",
-          desc: "Mineral restoration and anti-sensitivity coating."
+          desc: "Mineral restoration and anti-sensitivity coating.",
+          doctorNote: "💎 Protective berry varnish"
         }
       ]
     },
     kids: {
-      tag: "Special Approach for Children",
+      tag: "Kids Smile Laboratory",
+      badge: "⭐ 100% Fear-Free Adaptation",
       title: "The Dentist Your Child Loves to Visit",
       desc: "I genuinely adore children and understand how crucial the first dental visit is. We replace fear with curiosity: playing with dental models, exploring the gentle 'breeze brush', and learning how to care for teeth happily at home.",
-      features: [
+      steps: [
         {
-          title: "Playful Adaptation",
-          desc: "Getting acquainted with the 'magic mirror' and gentle tools without stress."
+          num: "Step 01 💨",
+          title: "Breeze Brush & Discovery",
+          desc: "Exploring the clinic and gentle instruments through playful storytelling."
         },
         {
-          title: "Interactive Brushing Lesson",
-          desc: "Hands-on demonstration with tooth models, choosing the right toothbrush and tasty safe paste."
+          num: "Step 02 🪞",
+          title: "Magic Mirror",
+          desc: "Counting teeth together with the child while watching favorite cartoons."
         },
         {
-          title: "Enamel Protection",
-          desc: "Strengthening baby and permanent teeth with fruit-flavored fluoride remineralization."
+          num: "Step 03 🍓",
+          title: "Berry Super-Gel",
+          desc: "Gentle enamel strengthening with fruit-flavored non-bitter protective varnish."
         },
         {
-          title: "Gift for Every Little Hero",
-          desc: "Reinforcing a joyful memory with a sweet souvenir after each session."
+          num: "Step 04 🎁",
+          title: "Hero Medal & Souvenir",
+          desc: "Every brave little patient picks a memorable prize after their visit."
         }
+      ],
+      routineTitle: "Doctor's Note: The 2-Minute Rule ⏱️",
+      routineItems: [
+        "🍓 Brush twice a day for 2 full minutes",
+        "🪥 Replace toothbrush every 2–3 months",
+        "✨ Brush with sweeping motions from gum to tip",
+        "🦷 Parents assist brushing until 8–9 years old"
       ],
       btnAction: "Book a Child Adaptation Visit"
     },
@@ -543,8 +603,9 @@ const siteData = {
       phContact: "+7 (999) 000-00-00 or @username",
       btnTelegram: "Book via Telegram →",
       btnDirect: "Submit Request on Website",
-      confirmTitle: "Thank You for Your Request",
-      confirmDesc: "Dr. Sabina Azimova will contact you within 15 minutes to confirm the exact time slot.",
+      errEmpty: "Please provide your name and contact details.",
+      confirmTitle: "✨ Request Sent Successfully!",
+      confirmDesc: "Dr. Sabina will contact you within 15 minutes to confirm the exact appointment slot.",
       timeOptions: [
         "Upcoming days (Morning 10:00–13:00)",
         "Upcoming days (Afternoon 13:00–17:00)",
@@ -553,10 +614,11 @@ const siteData = {
       ]
     },
     footer: {
-      desc: "Gentle adult and pediatric dental care, professional oral hygiene, and smile aesthetics.",
+      desc: "Gentle adult and pediatric dental care, professional oral hygiene, and smile aesthetics in Saint Petersburg.",
+      doctorQuote: "“Smile often — it looks wonderful on you!” — Dr. Sabina ✦",
       clinicsTitle: "Clinic Locations",
       contactTitle: "Get in Touch",
-      copyright: "© 2026 Sabina Azimova Dental Atelier.",
+      copyright: "© 2026 Dr. Sabina Azimova Dental Atelier.",
       subnote: "By appointment only"
     },
     floatingTg: "Chat on Telegram"
@@ -642,9 +704,9 @@ class AtelierApp {
     const header = document.querySelector('.site-header');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 30) {
-        header.classList.add('scrolled');
+        header?.classList.add('scrolled');
       } else {
-        header.classList.remove('scrolled');
+        header?.classList.remove('scrolled');
       }
     }, { passive: true });
   }
@@ -679,6 +741,9 @@ class AtelierApp {
     // Hero
     const heroTag = document.getElementById('heroTag');
     if (heroTag) heroTag.textContent = t.hero.tag;
+    const heroKidBadge = document.getElementById('heroKidBadge');
+    if (heroKidBadge) heroKidBadge.textContent = t.hero.kidBadge;
+
     const heroTitle = document.getElementById('heroTitle');
     if (heroTitle) {
       heroTitle.innerHTML = `${t.hero.titleLine1} <br><span class="italic-serif">${t.hero.titleLine2}</span>`;
@@ -693,6 +758,8 @@ class AtelierApp {
     if (heroCaptionDoctor) heroCaptionDoctor.textContent = t.hero.captionDoctor;
     const heroCaptionCity = document.getElementById('heroCaptionCity');
     if (heroCaptionCity) heroCaptionCity.textContent = t.hero.captionCity;
+    const heroDoodleArrow = document.getElementById('heroDoodleArrow');
+    if (heroDoodleArrow) heroDoodleArrow.textContent = t.hero.doodleArrow;
 
     // Trust Bar
     this.renderTrustBar();
@@ -712,6 +779,8 @@ class AtelierApp {
     // Kids Section
     const kidsTag = document.getElementById('kidsTag');
     if (kidsTag) kidsTag.textContent = t.kids.tag;
+    const kidsBadge = document.getElementById('kidsBadge');
+    if (kidsBadge) kidsBadge.textContent = t.kids.badge;
     const kidsTitle = document.getElementById('kidsTitle');
     if (kidsTitle) kidsTitle.textContent = t.kids.title;
     const kidsDesc = document.getElementById('kidsDesc');
@@ -719,14 +788,30 @@ class AtelierApp {
     const kidsBtn = document.getElementById('kidsBtn');
     if (kidsBtn) kidsBtn.textContent = t.kids.btnAction;
 
-    const kidsFeaturesMount = document.getElementById('kidsFeaturesMount');
-    if (kidsFeaturesMount) {
-      kidsFeaturesMount.innerHTML = t.kids.features.map(f => `
-        <div class="kids-feature-card">
-          <h4>${f.title}</h4>
-          <p>${f.desc}</p>
+    const kidsStepsMount = document.getElementById('kidsStepsMount');
+    if (kidsStepsMount) {
+      kidsStepsMount.innerHTML = t.kids.steps.map(step => `
+        <div class="kids-step-card">
+          <div class="kids-step-number">${step.num}</div>
+          <h4>${step.title}</h4>
+          <p>${step.desc}</p>
         </div>
       `).join('');
+    }
+
+    const kidsRoutineMount = document.getElementById('kidsRoutineMount');
+    if (kidsRoutineMount) {
+      kidsRoutineMount.innerHTML = `
+        <div class="routine-header">
+          <span class="routine-title">${t.kids.routineTitle}</span>
+          <span class="kid-note">⭐ Рекомендовано</span>
+        </div>
+        <div class="routine-checklist">
+          ${t.kids.routineItems.map(item => `
+            <div class="routine-item">${item}</div>
+          `).join('')}
+        </div>
+      `;
     }
 
     // Treatment Menu
@@ -759,6 +844,8 @@ class AtelierApp {
     // Footer
     const footerDesc = document.getElementById('footerDesc');
     if (footerDesc) footerDesc.textContent = t.footer.desc;
+    const footerDoctorQuote = document.getElementById('footerDoctorQuote');
+    if (footerDoctorQuote) footerDoctorQuote.textContent = t.footer.doctorQuote;
     const footerClinicsTitle = document.getElementById('footerClinicsTitle');
     if (footerClinicsTitle) footerClinicsTitle.textContent = t.footer.clinicsTitle;
     const footerContactTitle = document.getElementById('footerContactTitle');
@@ -779,7 +866,11 @@ class AtelierApp {
 
     const items = siteData[this.lang].trust;
     mount.innerHTML = items.map(item => `
-      <div class="trust-item">
+      <div class="trust-card">
+        <div class="trust-icon-header">
+          <span class="trust-emoji">${item.emoji}</span>
+          <span class="trust-stamp">${item.stamp}</span>
+        </div>
         <span class="trust-title">${item.title}</span>
         <span class="trust-desc">${item.desc}</span>
       </div>
@@ -803,29 +894,42 @@ class AtelierApp {
       </div>
 
       <div class="atelier-slider-card">
-        <div class="atelier-split-viewport" id="splitViewport" style="--split: ${this.gallerySplit}%;">
-          <!-- Base Layer (AFTER image, 100% full & static) -->
+        <div 
+          class="atelier-split-viewport" 
+          id="splitViewport" 
+          role="slider"
+          tabindex="0"
+          aria-label="${g.title}"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="${Math.round(this.gallerySplit)}"
+          style="--split: ${this.gallerySplit}%;"
+        >
+          <!-- Base Layer (AFTER image) -->
           <div class="atelier-layer-after">
-            <img src="${currentCase.afterImage}" alt="After" draggable="false">
+            <img src="${currentCase.afterImage}" alt="${currentCase.title} - ${g.tagAfter}" draggable="false">
             <span class="atelier-tag tag-after">${g.tagAfter}</span>
           </div>
 
-          <!-- Overlay Layer (BEFORE image, 100% full & static, dynamically clipped from left) -->
+          <!-- Overlay Layer (BEFORE image) -->
           <div class="atelier-layer-before" id="beforeLayer" style="clip-path: inset(0 ${100 - this.gallerySplit}% 0 0); -webkit-clip-path: inset(0 ${100 - this.gallerySplit}% 0 0);">
-            <img src="${currentCase.beforeImage}" alt="Before" draggable="false">
+            <img src="${currentCase.beforeImage}" alt="${currentCase.title} - ${g.tagBefore}" draggable="false">
             <span class="atelier-tag tag-before">${g.tagBefore}</span>
           </div>
 
-          <!-- Divider slider handle -->
+          <!-- Divider handle -->
           <div class="atelier-divider-line" id="dividerLine" style="left: ${this.gallerySplit}%;">
-            <div class="atelier-divider-handle">✦</div>
+            <div class="atelier-divider-handle" aria-hidden="true">⇄</div>
           </div>
         </div>
 
         <div class="atelier-details">
           <div>
-            <span class="section-tag" style="margin-bottom: 0.5rem;">${g.badge}</span>
-            <h3 style="margin-bottom: 0.5rem;">${currentCase.title}</h3>
+            <div class="atelier-slider-hint">
+              <span>✦</span> ${g.sliderHint}
+            </div>
+            <span class="section-tag">${g.badge}</span>
+            <h3 style="margin-top: var(--space-2); margin-bottom: var(--space-2);">${currentCase.title}</h3>
             <p style="font-size: var(--text-sm);">${currentCase.description}</p>
             
             <div class="atelier-spec-list">
@@ -840,7 +944,7 @@ class AtelierApp {
             </div>
           </div>
 
-          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-top: var(--space-4);">
             <a href="#concierge" class="btn btn-solid btn-sm" onclick="window.app.setConciergeService('${currentCase.category}')">
               ${g.btnBook}
             </a>
@@ -867,22 +971,26 @@ class AtelierApp {
     const dividerLine = document.getElementById('dividerLine');
     if (!viewport || !beforeLayer || !dividerLine) return;
 
-    const setPosition = (clientX) => {
-      const rect = viewport.getBoundingClientRect();
-      let percent = ((clientX - rect.left) / rect.width) * 100;
+    const setPosition = (percent) => {
       percent = Math.max(0, Math.min(100, percent));
-      
       this.gallerySplit = percent;
       viewport.style.setProperty('--split', `${percent}%`);
+      viewport.setAttribute('aria-valuenow', Math.round(percent));
       beforeLayer.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
       beforeLayer.style.webkitClipPath = `inset(0 ${100 - percent}% 0 0)`;
       dividerLine.style.left = `${percent}%`;
     };
 
+    const handlePointer = (clientX) => {
+      const rect = viewport.getBoundingClientRect();
+      const percent = ((clientX - rect.left) / rect.width) * 100;
+      setPosition(percent);
+    };
+
     const onPointerMove = (e) => {
       if (!this.isDragging) return;
       const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-      setPosition(clientX);
+      handlePointer(clientX);
     };
 
     const stopDrag = () => {
@@ -897,7 +1005,7 @@ class AtelierApp {
     const startDrag = (e) => {
       this.isDragging = true;
       const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-      setPosition(clientX);
+      handlePointer(clientX);
       window.addEventListener('mousemove', onPointerMove);
       window.addEventListener('mouseup', stopDrag);
       window.addEventListener('touchmove', onPointerMove, { passive: true });
@@ -906,6 +1014,34 @@ class AtelierApp {
 
     viewport.addEventListener('mousedown', startDrag);
     viewport.addEventListener('touchstart', startDrag, { passive: true });
+
+    // Keyboard accessibility for WCAG 2.1 AA
+    viewport.addEventListener('keydown', (e) => {
+      let handled = false;
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') {
+        setPosition(this.gallerySplit - 4);
+        handled = true;
+      } else if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
+        setPosition(this.gallerySplit + 4);
+        handled = true;
+      } else if (e.key === 'Home') {
+        setPosition(0);
+        handled = true;
+      } else if (e.key === 'End') {
+        setPosition(100);
+        handled = true;
+      } else if (e.key === 'PageDown') {
+        setPosition(this.gallerySplit - 15);
+        handled = true;
+      } else if (e.key === 'PageUp') {
+        setPosition(this.gallerySplit + 15);
+        handled = true;
+      }
+
+      if (handled) {
+        e.preventDefault();
+      }
+    });
   }
 
   renderWorksGrid() {
@@ -920,17 +1056,19 @@ class AtelierApp {
     const sub = document.getElementById('worksSub');
     if (sub) sub.textContent = w.subtitle;
 
-    mount.innerHTML = w.items.map(item => `
-      <div class="work-card">
+    mount.innerHTML = w.items.map((item, i) => `
+      <div class="work-polaroid">
+        <div class="washi-tape ${i % 3 === 0 ? 'washi-tape-yellow' : (i % 3 === 1 ? 'washi-tape-mint' : 'washi-tape-pink')}"></div>
         <div class="work-thumb">
           <img src="${item.img}" alt="${item.title}" loading="lazy">
-          <span class="work-badge">${item.badge}</span>
+          <span class="work-stamp">${item.badge}</span>
         </div>
         <div class="work-body">
           <div>
             <h4>${item.title}</h4>
             <p>${item.desc}</p>
           </div>
+          <div class="work-doctor-note">${item.doctorNote}</div>
         </div>
       </div>
     `).join('');
@@ -943,22 +1081,28 @@ class AtelierApp {
     const items = siteData[this.lang].menu.items;
     const btnLabel = siteData[this.lang].menu.btnSelect;
 
-    mount.innerHTML = items.map(item => `
-      <div class="menu-item">
-        <span class="menu-index">${item.index}</span>
-        <div class="menu-title-wrap">
-          <h3>${item.title}</h3>
-          <span class="duration">${item.duration}</span>
-        </div>
-        <p class="menu-desc">${item.description}</p>
-        <div class="menu-price-action">
-          <span class="menu-price">${item.price}</span>
-          <a href="#concierge" class="btn btn-wire btn-sm" onclick="window.app.setConciergeService('${item.id}')">
-            ${btnLabel}
-          </a>
+    mount.innerHTML = `
+      <div class="menu-ledger-card">
+        <div class="menu-list">
+          ${items.map(item => `
+            <div class="menu-item">
+              <span class="menu-index">${item.index}</span>
+              <div class="menu-title-wrap">
+                <h3>${item.title}</h3>
+                <span class="duration">⏱️ ${item.duration}</span>
+              </div>
+              <p class="menu-desc">${item.description}</p>
+              <div class="menu-price-action">
+                <span class="menu-price">${item.price}</span>
+                <a href="#concierge" class="btn btn-wire btn-sm" onclick="window.app.setConciergeService('${item.id}')">
+                  ${btnLabel}
+                </a>
+              </div>
+            </div>
+          `).join('')}
         </div>
       </div>
-    `).join('');
+    `;
   }
 
   renderJournal() {
@@ -997,6 +1141,7 @@ class AtelierApp {
 
     mount.innerHTML = `
       <div class="concierge-card">
+        <div class="washi-tape washi-tape-pink"></div>
         <div class="concierge-title">
           <span class="section-tag">${c.tag}</span>
           <h2>${c.title}</h2>
@@ -1036,8 +1181,10 @@ class AtelierApp {
             </div>
           </div>
 
-          <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap; margin-top: var(--space-6);">
-            <button type="button" class="btn btn-solid" id="btnAtelierTelegram" onclick="window.app.submitTelegramBooking()">
+          <div id="formToast" class="form-feedback-toast" role="alert"></div>
+
+          <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap; margin-top: var(--space-8);">
+            <button type="button" class="btn btn-amber" id="btnAtelierTelegram" onclick="window.app.submitTelegramBooking()">
               ${c.btnTelegram}
             </button>
             <button type="button" class="btn btn-wire" id="btnAtelierDirect" onclick="window.app.submitDirectBooking()">
@@ -1046,9 +1193,10 @@ class AtelierApp {
           </div>
         </form>
 
-        <div id="conciergeConfirmation" style="display: none; text-align: center; padding-top: 2rem;">
+        <div id="conciergeConfirmation" style="display: none; text-align: center; padding: 2rem 1rem;">
+          <div class="kid-note" style="margin-bottom: 1rem;">🎉 ${c.confirmTitle}</div>
           <h3 style="margin-bottom: 0.5rem;">${c.confirmTitle}</h3>
-          <p style="color: var(--text-muted); font-size: var(--text-sm);">
+          <p style="color: var(--text-muted); font-size: var(--text-base); max-width: 500px; margin: 0 auto;">
             ${c.confirmDesc}
           </p>
         </div>
@@ -1081,12 +1229,19 @@ class AtelierApp {
   }
 
   submitDirectBooking() {
+    const c = siteData[this.lang].concierge;
     const name = (document.getElementById('conciergeName')?.value || '').trim();
     const contact = (document.getElementById('conciergeContact')?.value || '').trim();
+    const toast = document.getElementById('formToast');
+
     if (!name || !contact) {
-      alert(this.lang === 'ru' ? 'Пожалуйста, укажите ваше имя и контактные данные.' : 'Please enter your name and contact details.');
+      if (toast) {
+        toast.className = 'form-feedback-toast error';
+        toast.textContent = c.errEmpty;
+      }
       return;
     }
+
     const form = document.getElementById('conciergeForm');
     const confirm = document.getElementById('conciergeConfirmation');
     if (form) form.style.display = 'none';
@@ -1108,10 +1263,10 @@ class AtelierApp {
     if (!mount) return;
 
     mount.innerHTML = clinicsData.map(c => `
-      <div style="padding-bottom: 1.25rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 1.25rem;">
+      <div style="padding-bottom: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 1rem;">
         <h4 style="color: #FFFFFF; font-size: var(--text-base); margin-bottom: 0.25rem;">м. ${c.metro[this.lang]}</h4>
-        <p style="color: rgba(255, 255, 255, 0.7); font-size: var(--text-sm); margin-bottom: 0.2rem;">📍 ${c.address[this.lang]}</p>
-        <span style="color: rgba(255, 255, 255, 0.4); font-size: var(--text-xs);">${c.note[this.lang]}</span>
+        <p style="color: rgba(255, 255, 255, 0.75); font-size: var(--text-sm); margin-bottom: 0.2rem;">📍 ${c.address[this.lang]}</p>
+        <span style="color: rgba(255, 255, 255, 0.45); font-size: var(--text-xs);">${c.note[this.lang]}</span>
       </div>
     `).join('');
   }

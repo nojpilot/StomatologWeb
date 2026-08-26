@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <defs>
+    <!-- Cute Smiling Tooth with Sparkle -->
+    <g id="doodle-tooth">
+      <path d="M12 2C8 2 4 4.5 4 8.5C4 11.5 5.5 13.5 6.5 16C7.5 18.5 8 22 10 22C11.5 22 12 19 12 17C12 19 12.5 22 14 22C16 22 16.5 18.5 17.5 16C18.5 13.5 20 11.5 20 8.5C20 4.5 16 2 12 2Z" 
+            fill="#FFFFFF" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Eyes -->
+      <circle cx="9.5" cy="8" r="1" fill="currentColor"/>
+      <circle cx="14.5" cy="8" r="1" fill="currentColor"/>
+      <!-- Smile -->
+      <path d="M9.5 11C10.2 12.2 13.8 12.2 14.5 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <!-- Rosy Cheeks -->
+      <circle cx="8" cy="10" r="1" fill="#FF85A2" opacity="0.8"/>
+      <circle cx="16" cy="10" r="1" fill="#FF85A2" opacity="0.8"/>
+    </g>
+
+    <!-- Sparkle / Star Doodle -->
+    <g id="doodle-sparkle">
+      <path d="M12 2C12 7 7 12 2 12C7 12 12 17 12 22C12 17 17 12 22 12C17 12 12 7 12 2Z" 
+            fill="currentColor"/>
+    </g>
+
+    <!-- Hand-drawn Arrow (Curved Down-Right) -->
+    <g id="doodle-arrow-curved">
+      <path d="M4 4C12 2 24 8 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M16 20L22 23L24 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Hand-drawn Arrow (Curved Left-Down) -->
+    <g id="doodle-arrow-left">
+      <path d="M22 4C14 2 4 8 6 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M12 20L6 23L4 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Wiggle / Squiggly Underline -->
+    <g id="doodle-wiggle">
+      <path d="M2 8C6 4 10 12 14 8C18 4 22 12 26 8C30 4 34 12 38 8C42 4 46 12 50 8C54 4 58 12 62 8C66 4 70 12 74 8C78 4 82 12 86 8C90 4 94 12 98 8" 
+            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Hand-drawn Heart -->
+    <g id="doodle-heart">
+      <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z" 
+            fill="currentColor"/>
+    </g>
+
+    <!-- Sun / Flower Smile -->
+    <g id="doodle-sun">
+      <circle cx="12" cy="12" r="5" fill="#FFE066" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M12 2V5 M12 19V22 M2 12H5 M19 12H22 M4.93 4.93L7.05 7.05 M16.95 16.95L19.07 19.07 M4.93 19.07L7.05 16.95 M16.95 7.05L19.07 4.93" 
+            stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+
+    <!-- Quality Stamp Ring -->
+    <g id="doodle-stamp">
+      <circle cx="40" cy="40" r="36" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6,4"/>
+      <circle cx="40" cy="40" r="30" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    </g>
+  </defs>
+</svg>

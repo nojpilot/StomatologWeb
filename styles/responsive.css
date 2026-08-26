@@ -13,16 +13,21 @@
 
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-8);
+    gap: var(--space-10);
   }
 
-  .hero-photo-frame img {
-    height: 420px;
+  .hero-polaroid {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .hero-polaroid img {
+    height: 380px;
   }
 
   .trust-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-6);
+    gap: var(--space-5);
   }
 
   .atelier-slider-card {
@@ -35,6 +40,15 @@
 
   .works-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kids-story-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .menu-ledger-card {
+    padding: var(--space-6);
   }
 
   .menu-item {
@@ -54,6 +68,7 @@
     flex-direction: column;
     text-align: center;
     padding: var(--space-6);
+    gap: var(--space-6);
   }
 
   .footer-top-grid {
@@ -68,7 +83,7 @@
 @media (max-width: 768px) {
   :root {
     --container-gutter: 16px;
-    --header-h: 68px;
+    --header-h: 70px;
     --text-3xl: 2.15rem;
     --text-2xl: 1.65rem;
   }
@@ -87,16 +102,21 @@
   }
 
   .brand-title {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
   }
 
   .brand-sub {
     font-size: 0.68rem;
   }
 
+  .logo-wrap {
+    width: 38px;
+    height: 38px;
+  }
+
   .logo-img {
-    width: 34px;
-    height: 34px;
+    width: 24px;
+    height: 24px;
   }
 
   .nav-burger {
@@ -113,8 +133,8 @@
     flex-direction: column;
     align-items: flex-start;
     padding: var(--space-6) var(--space-5);
-    gap: var(--space-4);
-    border-top: 1px solid var(--border-subtle);
+    gap: var(--space-3);
+    border-top: 1px solid var(--border-paper);
     transform: translateY(-8px);
     opacity: 0;
     pointer-events: none;
@@ -122,6 +142,7 @@
     z-index: 1000;
     overflow-y: auto;
     box-sizing: border-box;
+    box-shadow: var(--shadow-paper-lg);
   }
 
   .nav-menu.active {
@@ -133,7 +154,7 @@
   .nav-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(20, 19, 18, 0.4);
+    background: rgba(28, 26, 24, 0.45);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     opacity: 0;
@@ -148,10 +169,10 @@
   }
 
   .nav-item {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 600;
     width: 100%;
-    padding: 0.65rem 0;
+    padding: 0.75rem 0;
     border-bottom: 1px solid var(--border-subtle);
   }
 
@@ -169,6 +190,10 @@
     gap: var(--space-6);
   }
 
+  .hero-kid-badge {
+    font-size: 1.15rem;
+  }
+
   .hero-statement {
     font-size: var(--text-base);
     margin: var(--space-3) 0 var(--space-6) 0;
@@ -184,13 +209,20 @@
     width: 100%;
   }
 
-  .hero-photo-frame img {
-    height: 360px;
+  .hero-polaroid img {
+    height: 320px;
+  }
+
+  .hero-doodle-arrow {
+    position: static;
+    transform: none;
+    margin-top: var(--space-3);
+    justify-content: center;
   }
 
   /* Trust Bar */
   .trust-bar {
-    padding: var(--space-6) 0;
+    padding: var(--space-8) 0;
   }
 
   .trust-grid {
@@ -198,19 +230,9 @@
     gap: var(--space-4);
   }
 
-  .trust-item {
-    padding-bottom: var(--space-3);
-    border-bottom: 1px solid var(--border-subtle);
-  }
-
-  .trust-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-
   /* Slider Card */
   .atelier-split-viewport {
-    height: 300px;
+    height: 310px;
   }
 
   .atelier-details {
@@ -220,7 +242,11 @@
   /* Works Grid */
   .works-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-4);
+    gap: var(--space-6);
+  }
+
+  .work-polaroid {
+    transform: none !important;
   }
 
   .work-thumb {
@@ -228,12 +254,20 @@
   }
 
   /* Kids Section */
-  .kids-features-grid {
+  .kids-steps-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-4);
+    gap: var(--space-3);
+  }
+
+  .routine-checklist {
+    grid-template-columns: 1fr;
   }
 
   /* Treatment Menu */
+  .menu-ledger-card {
+    padding: var(--space-4);
+  }
+
   .menu-item {
     grid-template-columns: 1fr auto;
     gap: var(--space-2);
@@ -253,21 +287,21 @@
   /* Journal Section */
   .journal-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-4);
+    gap: var(--space-5);
   }
 
   .journal-tg-banner {
-    padding: var(--space-5);
+    padding: var(--space-6);
   }
 
   /* Concierge Form */
   .concierge-card {
-    padding: var(--space-5);
+    padding: var(--space-6) var(--space-5);
   }
 
   .concierge-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-3);
+    gap: var(--space-4);
   }
 
   /* Footer */
@@ -283,7 +317,7 @@
 
   .footer-bottom-bar {
     flex-direction: column;
-    gap: var(--space-2);
+    gap: var(--space-3);
     text-align: center;
   }
 
@@ -301,11 +335,11 @@
    -------------------------------------------------------------------------- */
 @media (max-width: 390px) {
   :root {
-    --container-gutter: 12px;
+    --container-gutter: 14px;
   }
 
-  .hero-photo-frame img {
-    height: 310px;
+  .hero-polaroid img {
+    height: 280px;
   }
 
   .atelier-split-viewport {
@@ -318,5 +352,13 @@
 
   .concierge-card {
     padding: var(--space-4);
+  }
+
+  .brand-title {
+    font-size: 0.8rem;
+  }
+
+  .brand-sub {
+    font-size: 0.62rem;
   }
 }
