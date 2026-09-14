@@ -1722,9 +1722,18 @@
   font-size: var(--text-sm);
   font-weight: 600;
   z-index: 900;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), box-shadow 0.2s ease;
   max-width: calc(100vw - 32px);
   box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+}
+
+.floating-atelier-pill.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .floating-atelier-pill:hover {

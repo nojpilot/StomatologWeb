@@ -201,85 +201,178 @@
 
   /* Hero Section */
   .hero-editorial {
-    padding-top: calc(var(--header-h) + var(--space-6));
-    padding-bottom: var(--space-10);
+    padding-top: calc(var(--header-h) + var(--space-4));
+    padding-bottom: var(--space-6);
   }
 
   .hero-grid {
-    gap: var(--space-6);
+    gap: var(--space-5);
+  }
+
+  .section-tag {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.85rem;
+    letter-spacing: 0.04em;
   }
 
   .hero-kid-badge {
-    font-size: 1.15rem;
+    display: none !important;
+  }
+
+  .hero-content h1 {
+    font-size: 2.15rem;
+    line-height: 1.15;
+    margin-bottom: var(--space-2);
   }
 
   .hero-statement {
-    font-size: var(--text-base);
-    margin: var(--space-3) 0 var(--space-6) 0;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin: var(--space-2) 0 var(--space-5) 0;
+    color: var(--text-muted);
   }
 
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
-    gap: var(--space-3);
+    gap: 0;
   }
 
   .hero-actions .btn {
     width: 100%;
+    min-height: 48px;
+    font-size: 0.98rem;
+  }
+
+  .hero-actions .btn-link {
+    display: none !important;
+  }
+
+  .washi-tape,
+  .hero-doodle-arrow {
+    display: none !important;
+  }
+
+  .hero-polaroid {
+    transform: none !important;
+    max-width: 100%;
+    padding: 8px 8px 14px 8px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(45, 35, 20, 0.06);
+    background: #FFFFFF;
   }
 
   .hero-polaroid img {
-    height: 320px;
+    height: 300px;
+    border-radius: 12px;
   }
 
-  .hero-doodle-arrow {
-    position: static;
-    transform: none;
-    margin-top: var(--space-3);
-    justify-content: center;
+  .hero-polaroid-caption {
+    margin-top: 8px;
+    padding: 0 4px;
   }
 
-  /* Trust Bar */
+  .hero-polaroid-name {
+    font-size: 1.25rem;
+  }
+
+  .hero-polaroid-city {
+    font-size: 0.7rem;
+  }
+
+  /* Trust Bar — Compact 2x2 Grid */
   .trust-bar {
-    padding: var(--space-8) 0;
+    padding: var(--space-6) 0;
   }
 
   .trust-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+
+  .trust-card {
+    padding: var(--space-3) var(--space-3);
+    border-radius: 12px;
+    gap: 2px;
+  }
+
+  .trust-icon-header {
+    margin-bottom: 2px;
+  }
+
+  .trust-emoji {
+    font-size: 1.3rem;
+  }
+
+  .trust-stamp {
+    font-size: 0.8rem;
+  }
+
+  .trust-title {
+    font-size: 0.82rem;
+    line-height: 1.25;
+    margin-top: 2px;
+  }
+
+  .trust-desc {
+    font-size: 0.72rem;
+    line-height: 1.35;
   }
 
   /* Quiz */
   .procedure-quiz-card {
-    padding: var(--space-5);
+    padding: var(--space-5) var(--space-4);
+    border-radius: 16px;
   }
 
   .quiz-options-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-3);
+    gap: var(--space-2);
+  }
+
+  .quiz-option-btn {
+    padding: var(--space-3) var(--space-4);
+    min-height: 48px;
+    border-radius: 10px;
   }
 
   /* Slider Card */
   .atelier-split-viewport {
-    height: 310px;
+    height: 300px;
   }
 
   .atelier-details {
-    padding: var(--space-5);
+    padding: var(--space-4);
   }
 
-  /* Works Grid */
+  /* Works Grid — Clean 2-column mobile layout */
   .works-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
   }
 
   .work-polaroid {
     transform: none !important;
+    padding: 6px 6px 10px 6px;
+    border-radius: 12px;
   }
 
   .work-thumb {
-    height: 220px;
+    height: 135px;
+    border-radius: 8px;
+  }
+
+  .work-caption {
+    margin-top: 6px;
+  }
+
+  .work-caption h3 {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+
+  .work-badge {
+    font-size: 0.65rem;
   }
 
   /* Lightbox */

@@ -84,22 +84,37 @@ class AtelierApp {
   // --------------------------------------------------------------------------
   bindHeaderScroll() {
     const header = document.querySelector('.site-header');
-    if (!header) return;
+    const floatingPill = document.querySelector('.floating-atelier-pill');
 
     let ticking = false;
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (header) {
+        if (scrollY > 30) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }
+      if (floatingPill) {
+        if (scrollY > 280) {
+          floatingPill.classList.add('visible');
+        } else {
+          floatingPill.classList.remove('visible');
+        }
+      }
+      ticking = false;
+    };
+
     window.addEventListener('scroll', () => {
       if (!ticking) {
-        window.requestAnimationFrame(() => {
-          if (window.scrollY > 30) {
-            header.classList.add('scrolled');
-          } else {
-            header.classList.remove('scrolled');
-          }
-          ticking = false;
-        });
+        window.requestAnimationFrame(handleScroll);
         ticking = true;
       }
     }, { passive: true });
+
+    // Initial evaluation
+    handleScroll();
   }
 
   // --------------------------------------------------------------------------

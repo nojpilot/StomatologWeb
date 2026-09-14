@@ -20,11 +20,11 @@ const siteData = {
       cta: "Записаться"
     },
     hero: {
-      tag: "Швейцарский протокол GBT • Детский прием • Отбеливание",
-      kidBadge: "🦷 Бережно & без боли для малышей и взрослых ✨",
+      tag: "✦ Швейцарский протокол GBT • СПб",
+      kidBadge: "Бережная адаптация малышей & забота для взрослых",
       titleLine1: "Красота и здоровье",
       titleLine2: "вашей улыбки",
-      statement: "Бережная гигиена AirFlow на основе глицина, легкая адаптация маленьких пациентов в форме игры, деликатное отбеливание и терапия премиальными материалами.",
+      statement: "Индивидуальная гигиена эмали по швейцарскому протоколу GBT, бережный детский прием и деликатная эстетика улыбки в Санкт-Петербурге.",
       btnBook: "Записаться на прием",
       btnTelegram: "Консультация в Telegram →",
       captionDoctor: "Доктор Сабина Азимова",
@@ -571,11 +571,11 @@ const siteData = {
       cta: "Book Visit"
     },
     hero: {
-      tag: "Swiss GBT Protocol • Pediatric Care • Whitening",
-      kidBadge: "🦷 Gentle & fear-free for kids and adults ✨",
+      tag: "✦ Swiss GBT Protocol • SPb",
+      kidBadge: "Gentle pediatric care & adult aesthetics",
       titleLine1: "The Art of a Natural",
       titleLine2: "Healthy Smile",
-      statement: "Swiss GBT AirFlow protocol with glycine powder, fear-free playful adaptation for children, gentle teeth whitening, and aesthetic restoration.",
+      statement: "Gentle Swiss GBT hygiene, playful fear-free care for young patients, and natural aesthetic dentistry in St. Petersburg.",
       btnBook: "Book Appointment",
       btnTelegram: "Consult on Telegram →",
       captionDoctor: "Dr. Sabina Azimova",
