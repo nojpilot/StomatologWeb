@@ -26,7 +26,7 @@
   --gold-main: #8A5B29;            /* Warm Amber Bronze (4.8:1 on white - passes AA) */
   --gold-dark: #68421A;
   --gold-light: #F7EDE1;
-  --gold-tint: rgba(138, 91, 41, 0.08);
+  --gold-tint: rgba(138, 91, 41, 0.09);
 
   /* Playful Storybook & Highlighter Accents */
   --hl-yellow: #FEF08A;            /* Pastel Sunny Highlighter */
@@ -37,9 +37,10 @@
   --stamp-red: #BE123C;            /* Seal Stamp Red */
 
   /* Washi-Tape Accents */
-  --washi-tape-yellow: rgba(254, 240, 138, 0.85);
-  --washi-tape-mint: rgba(167, 243, 208, 0.85);
-  --washi-tape-pink: rgba(254, 205, 211, 0.85);
+  --washi-tape-yellow: rgba(254, 240, 138, 0.88);
+  --washi-tape-mint: rgba(167, 243, 208, 0.88);
+  --washi-tape-pink: rgba(254, 205, 211, 0.88);
+  --washi-tape-blue: rgba(186, 230, 253, 0.88);
 
   /* Borders & Shadows */
   --border-subtle: rgba(28, 26, 24, 0.08);
@@ -113,7 +114,7 @@ body {
   line-height: 1.65;
   color: var(--text-main);
   background-color: var(--bg-page);
-  background-image: radial-gradient(rgba(45, 35, 20, 0.035) 1px, transparent 0);
+  background-image: radial-gradient(rgba(45, 35, 20, 0.04) 1px, transparent 0);
   background-size: 24px 24px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -246,7 +247,7 @@ img {
   padding: 0.35rem 0.85rem;
   border-radius: var(--radius-full);
   margin-bottom: var(--space-3);
-  border: 1px solid rgba(138, 91, 41, 0.18);
+  border: 1px solid rgba(138, 91, 41, 0.2);
 }
 
 .section-head h2 {
@@ -311,26 +312,40 @@ img {
   transform: rotate(-1.5deg);
 }
 
-/* Washi Tape Strip Decoration */
+/* Washi Tape Strip Decoration with Realistic Serrated Jagged Cuts */
 .washi-tape {
   position: absolute;
   top: -12px;
   left: 50%;
   transform: translateX(-50%) rotate(-1.5deg);
-  width: 110px;
+  width: 116px;
   height: 26px;
   background: var(--washi-tape-yellow);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   z-index: 10;
-  opacity: 0.9;
-  border-left: 2px dashed rgba(0, 0, 0, 0.1);
-  border-right: 2px dashed rgba(0, 0, 0, 0.1);
+  opacity: 0.92;
+  /* Authentic jagged torn edges on left and right ends */
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    97% 20%, 100% 40%, 96% 60%, 100% 80%, 97% 100%, 
+    0 100%, 
+    3% 80%, 0 60%, 4% 40%, 0 20%
+  );
+  -webkit-clip-path: polygon(
+    0 0, 
+    100% 0, 
+    97% 20%, 100% 40%, 96% 60%, 100% 80%, 97% 100%, 
+    0 100%, 
+    3% 80%, 0 60%, 4% 40%, 0 20%
+  );
 }
 
-.washi-tape-pink { background: var(--washi-tape-pink); transform: translateX(-50%) rotate(1.5deg); }
-.washi-tape-mint { background: var(--washi-tape-mint); transform: translateX(-50%) rotate(-2deg); }
+.washi-tape-pink { background: var(--washi-tape-pink); transform: translateX(-50%) rotate(1.8deg); }
+.washi-tape-mint { background: var(--washi-tape-mint); transform: translateX(-50%) rotate(-2.2deg); }
+.washi-tape-blue { background: var(--washi-tape-blue); transform: translateX(-50%) rotate(1.2deg); }
 
-/* Polaroid Frame */
+/* Polaroid Frame with Micro 3D-Tilt Effect */
 .polaroid-frame {
   background: #FFFFFF;
   padding: 12px 12px 28px 12px;
@@ -342,7 +357,7 @@ img {
 }
 
 .polaroid-frame:hover {
-  transform: translateY(-3px) rotate(0.5deg);
+  transform: translateY(-4px) rotate(0.5deg) scale(1.015);
   box-shadow: var(--shadow-paper-lg);
 }
 
@@ -374,18 +389,26 @@ img {
   background: rgba(190, 18, 60, 0.03);
 }
 
+/* Squiggly SVG Underline Effect */
+.svg-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.svg-underline svg {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 9px;
+  color: var(--gold-main);
+  pointer-events: none;
+}
+
 /* Highlighters */
 .hl-mint { background: var(--hl-mint); padding: 0 4px; border-radius: 3px; }
 .hl-yellow { background: var(--hl-yellow); padding: 0 4px; border-radius: 3px; }
 .hl-rose { background: var(--hl-rose); padding: 0 4px; border-radius: 3px; }
-
-/* Squiggly Underline SVG */
-.wiggle-line {
-  display: block;
-  width: 100%;
-  height: 8px;
-  margin-top: 4px;
-}
 
 /* Unified Buttons */
 .btn {

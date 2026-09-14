@@ -9,21 +9,30 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
 
-  <!-- OpenGraph -->
+  <!-- OpenGraph Meta -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Доктор Сабина Азимова | Бережная стоматология & Детский прием">
   <meta property="og:description" content="Швейцарский протокол AirFlow GBT, адаптационный прием детей без слез, эстетическая терапия и отбеливание.">
   <meta property="og:image" content="assets/images/dr-sabina.jpg">
 
+  <!-- Performance & Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/images/dr-sabina.jpg" fetchpriority="high">
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/components.css">
   <link rel="stylesheet" href="styles/responsive.css">
+
+  <!-- Deferred Scripts for Instant Parsing & Zero Render Blocking -->
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
 </head>
 <body>
 
-  <!-- WCAG Accessibility: Skip to Content -->
-  <a href="#about" class="skip-link">Перейти к основному контенту</a>
+  <!-- WCAG Accessibility: Skip to Main Content -->
+  <a href="#mainContent" class="skip-link">Перейти к основному контенту</a>
 
   <!-- ========================================================================
        1. Structured Header with Paper Stamp Logo
@@ -33,7 +42,7 @@
       <!-- SVG Brand Logo -->
       <a href="#" class="brand-logo" aria-label="Доктор Сабина Азимова — на главную">
         <div class="logo-wrap">
-          <img src="assets/icons/logo.svg" alt="Логотип Сабины Азимовой" class="logo-img">
+          <img src="assets/icons/logo.svg" alt="Логотип Сабины Азимовой" class="logo-img" width="30" height="30">
         </div>
         <div class="brand-text">
           <span class="brand-title" id="brandTitle">SABINA AZIMOVA</span>
@@ -41,14 +50,9 @@
         </div>
       </a>
 
-      <!-- Desktop Nav -->
+      <!-- Desktop Nav (Injected dynamically) -->
       <nav class="nav-menu" id="navMenu" aria-label="Основная навигация">
-        <a href="#about" class="nav-item">О докторе</a>
-        <a href="#gallery" class="nav-item">Работы</a>
-        <a href="#kids" class="nav-item">Детям</a>
-        <a href="#menu" class="nav-item">Услуги</a>
-        <a href="#journal" class="nav-item">Блог</a>
-        <a href="#concierge" class="nav-item">Запись</a>
+        <!-- Injected by js/app.js -->
       </nav>
 
       <!-- Right Controls: Language Switcher + Reservation CTA -->
@@ -60,7 +64,7 @@
         </div>
 
         <a href="#concierge" class="btn btn-amber btn-sm" id="headerCta">Записаться</a>
-        <button type="button" class="nav-burger" id="navBurger" aria-label="Меню" aria-expanded="false" onclick="window.app.toggleMobileMenu()">☰</button>
+        <button type="button" class="nav-burger" id="navBurger" aria-label="Открыть меню навигации" aria-expanded="false" onclick="window.app.toggleMobileMenu()">☰</button>
       </div>
     </div>
     <div class="nav-backdrop" id="navBackdrop" onclick="window.app.closeMobileMenu()"></div>
@@ -126,7 +130,22 @@
     </section>
 
     <!-- ========================================================================
-         4. Real Clinical Works: Interactive Before / After Split Slider
+         4. Smart Procedure Matcher (Interactive Quiz / Calculator)
+         ======================================================================== -->
+    <section class="section quiz-section" id="quiz">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" id="quizTag">Умный подбор за 30 секунд</span>
+          <h2 id="quizTitle">Какая процедура подойдет именно вам?</h2>
+          <p id="quizSub">Ответьте на 2 простых вопроса, чтобы узнать точную стоимость и план ухода.</p>
+        </div>
+
+        <div id="quizMount"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. Real Clinical Works: Interactive Before / After Split Slider
          ======================================================================== -->
     <section class="section gallery-section" id="gallery">
       <div class="container">
@@ -141,22 +160,22 @@
     </section>
 
     <!-- ========================================================================
-         5. Real Works Macro Gallery Grid (Polaroid Cases)
+         6. Real Works Macro Gallery Grid with Category Filters & Lightbox
          ======================================================================== -->
     <section class="section works-grid-section">
       <div class="container">
         <div class="section-head">
           <span class="section-tag" id="worksTag">Реальные фотопротоколы</span>
           <h2 id="worksTitle">Макро-результаты процедур</h2>
-          <p id="worksSub">Честные фотографии клинических случаев без фильтров и ретуши.</p>
+          <p id="worksSub">Честные фотографии клинических случаев без фильтров и ретуши. Нажмите для увеличения.</p>
         </div>
 
-        <div class="works-grid" id="worksGridMount"></div>
+        <div id="worksGridMount"></div>
       </div>
     </section>
 
     <!-- ========================================================================
-         6. Children's Adaptation & Dental Care ("Детская лаборатория улыбок")
+         7. Children's Adaptation & 2-Minute Interactive Brushing Timer
          ======================================================================== -->
     <section class="section kids-section" id="kids">
       <div class="container">
@@ -175,8 +194,8 @@
             <!-- 4-step Storybook Cards -->
             <div class="kids-steps-grid" id="kidsStepsMount"></div>
 
-            <!-- Doctor Routine Memo Card -->
-            <div class="kids-routine-card" id="kidsRoutineMount"></div>
+            <!-- Interactive 2-Minute Tooth Brushing Game / Masterclass -->
+            <div id="kidsRoutineMount"></div>
 
             <div style="margin-top: var(--space-8);">
               <a href="#concierge" class="btn btn-amber" id="kidsBtn" onclick="window.app.setConciergeService('kids')">
@@ -188,7 +207,7 @@
           <div style="display: flex; justify-content: center;">
             <div class="hero-polaroid" style="transform: rotate(-1.5deg);">
               <div class="washi-tape washi-tape-mint"></div>
-              <img src="assets/images/reel-hygiene.jpg" alt="Обучение детей гигиене зубов — Доктор Сабина Азимова" width="440" height="460" style="object-fit: cover; height: 440px;">
+              <img src="assets/images/reel-hygiene.jpg" alt="Обучение детей гигиене зубов — Доктор Сабина Азимова" width="440" height="460" loading="lazy" decoding="async" style="object-fit: cover; height: 440px;">
               <div class="polaroid-caption">
                 «Маленькие герои улыбаются!» 🎈
               </div>
@@ -199,7 +218,7 @@
     </section>
 
     <!-- ========================================================================
-         7. Treatment Menu & Pricing (Recipe / Ledger)
+         8. Treatment Menu & Pricing (Recipe / Ledger)
          ======================================================================== -->
     <section class="section menu-section" id="menu">
       <div class="container">
@@ -214,7 +233,52 @@
     </section>
 
     <!-- ========================================================================
-         8. Educational Blog & Reels
+         9. Scrapbook Patient Reviews (Sticky Notes)
+         ======================================================================== -->
+    <section class="section reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" id="reviewsTag">Книга добрых отзывов</span>
+          <h2 id="reviewsTitle">Что говорят пациенты и мамы</h2>
+          <p id="reviewsSub">Искренние отзывы пациентов после бережного приема у доктора Сабины.</p>
+        </div>
+
+        <div id="reviewsMount"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         10. Doctor's Handwritten FAQ Accordion
+         ======================================================================== -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" id="faqTag">Вопросы без страха</span>
+          <h2 id="faqTitle">Частые вопросы пациентов</h2>
+          <p id="faqSub">Честные и понятные ответы доктора Сабины на самые волнующие темы.</p>
+        </div>
+
+        <div id="faqMount"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         11. Interactive Clinic Locations & Route Cards
+         ======================================================================== -->
+    <section class="section locations-section" id="locations">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" id="locationsTag">Удобные локации в центре</span>
+          <h2 id="locationsTitle">Где принимает доктор Сабина</h2>
+          <p id="locationsSub">Современные кабинеты в 3 минутах от метро с премиальным немецким оборудованием KaVo.</p>
+        </div>
+
+        <div id="locationsMount"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         12. Educational Blog & Reels
          ======================================================================== -->
     <section class="section journal-section" id="journal">
       <div class="container">
@@ -240,7 +304,7 @@
     </section>
 
     <!-- ========================================================================
-         9. Concierge Reservation Form (Appointment Card)
+         13. Concierge Reservation Form (Appointment Card)
          ======================================================================== -->
     <section class="section concierge-section" id="concierge">
       <div class="container">
@@ -250,7 +314,7 @@
   </main>
 
   <!-- ========================================================================
-       10. Storybook Minimalist Footer
+       14. Storybook Minimalist Footer
        ======================================================================== -->
   <footer class="site-footer">
     <div class="container">
@@ -258,7 +322,7 @@
         <div class="footer-brand">
           <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
             <div style="background: rgba(255, 255, 255, 0.1); padding: 6px; border-radius: 8px;">
-              <img src="assets/icons/logo-dark.svg" alt="Логотип" style="width: 28px; height: 28px;">
+              <img src="assets/icons/logo-dark.svg" alt="Логотип" width="28" height="28">
             </div>
             <h2 style="font-size: var(--text-lg); margin-bottom: 0;">SABINA AZIMOVA</h2>
           </div>
@@ -291,14 +355,25 @@
     </div>
   </footer>
 
-  <!-- Floating Telegram Contact Pill -->
+  <!-- Lightbox Modal for Macro Gallery -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Увеличенный просмотр макро-фотографии">
+    <div class="lightbox-card">
+      <button type="button" class="lightbox-close-btn" aria-label="Закрыть" onclick="window.app.closeLightbox()">✕</button>
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImg" src="" alt="Макро снимок процедуры" width="800" height="600">
+      </div>
+      <h3 id="lightboxTitle" style="margin-bottom: 0.25rem;"></h3>
+      <p id="lightboxDesc" style="font-size: var(--text-sm); color: var(--text-muted);"></p>
+      <div class="work-doctor-note" id="lightboxNote" style="margin-top: 0.75rem;"></div>
+    </div>
+  </div>
+
+  <!-- Floating Telegram Contact Pill (with iOS Safe Area insets) -->
   <a href="https://t.me/sabina_dental_spb" target="_blank" rel="noopener noreferrer" class="floating-atelier-pill" aria-label="Записаться к доктору в Telegram">
     <span class="floating-tooth-sparkle">🦷</span>
     <span id="floatingTgText">Записаться в Telegram</span>
     <span style="font-size: 0.95rem;">→</span>
   </a>
 
-  <!-- Application Controller Script -->
-  <script src="js/app.js"></script>
 </body>
 </html>
